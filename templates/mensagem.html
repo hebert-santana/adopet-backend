@@ -1,0 +1,39 @@
+{% extends 'header2.html' %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mensagem.css') }}">
+<title>Adopet | Mensagem</title>
+</head>
+
+<body>
+
+    <!-- header2.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div>
+            <p class="paragrafo">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</p>
+            <div class="formulario">
+                <form action="#">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="caixa nome" name="nome" placeholder="Insira seu nome completo" required>
+
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="caixa telefone" name="telefone"
+                        placeholder="Insira seu telefone e/ou whatsapp" required>
+
+                    <label for="nome-animal">Nome do animal</label>
+                    <input type="text" class="caixa nome-animal" name="nome-animal"
+                        placeholder="Por qual animal você se interessou?" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+                        required>Escreva a sua mensagem...</textarea>
+
+                    <input class="entrar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    {% endblock %}

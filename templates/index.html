@@ -1,0 +1,40 @@
+{% extends 'header.html' %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<title>Adopet | Home</title>
+</head>
+
+<body>
+
+    <!-- INICIO: Mensagem Logado -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <!-- FIM: Mensagem Logado -->
+
+    <!-- header.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div class="conteudo">
+            <img id="conteudo__logo-adopet" src="{{ url_for('static', filename='images/logo.svg') }}"
+                alt="Logo da Adopet">
+            <p class="conteudo__boas-vindas">Boas-vindas!</p>
+            <p class="conteudo__paragrafo">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+            <div class="conteudo__botoes">
+                <a href="/login" class="conteudo__botoes--btn">Já tenho conta</a>
+                <a href="/cadastro" class="conteudo__botoes--btn">Quero me Cadastrar</a>
+            </div>
+        </div>
+    </main>
+    <div class="ilustracao">
+    </div>
+
+    {% endblock %}

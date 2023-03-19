@@ -1,0 +1,24 @@
+{% extends 'header.html' %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<title>Adopet | Home</title>
+</head>
+
+<body>
+
+    <!-- header.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div class="conteudo">
+            <img id="erro" src="{{ url_for('static', filename='images/error404.gif') }}">
+            <p class="conteudo__paragrafo">A página solicitada não existe!</p>
+            <div class="conteudo__botoes">
+                <a href="/" class="conteudo__botoes--btn">Voltar para Home</a>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    {% endblock %}

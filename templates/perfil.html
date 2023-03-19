@@ -1,0 +1,45 @@
+{% extends 'header2.html' %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+<title>Adopet | Perfil</title>
+</head>
+
+<body>
+
+    <!-- header2.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div>
+            <p class="paragrafo">Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</p>
+            <div class="formulario">
+                <form id='formulario' action="#">
+                    <p class="perfil">Perfil</p>
+
+                    <label for="foto">Foto</label>
+                    <img id="foto--perfil" src="{{ url_for('static', filename='images/foto-perfil.png') }}"
+                        alt="foto de perfil">
+                    <input type="file" name="foto--carregar" id="foto--carregar">
+
+
+                    <label for="nome">Nome</label>
+                    <input type="text" class="caixa nome" name="nome" placeholder="Hebert Santana">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="caixa telefone" name="telefone" placeholder="55 37 XXXXX-XXXX">
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="caixa cidade" name="cidade" placeholder="Divinópolis">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4"
+                        cols="50">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</textarea>
+
+                    <input class="salvar" type="submit" value="Salvar">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    {% endblock %}

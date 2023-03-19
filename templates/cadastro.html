@@ -1,0 +1,58 @@
+{% extends 'header.html' %}
+{% block conteudo %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+<title>Adopet | Cadastro</title>
+</head>
+
+<body>
+        <!-- INICIO: Mensagem cria usuario -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <!-- FIM: Mensagem cria usuario -->
+
+    <!-- header.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div class="conteudo">
+            <img id="conteudo__logo-adopet" src="{{ url_for('static', filename='images/logo-azul.svg') }}"
+                alt="Logo da Adopet">
+            <p class="conteudo__paragrafo">Ainda não tem cadastro?</p>
+            <p class="conteudo__paragrafo">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+
+            <form class="conteudo__formulario" action="/adduser" onsubmit="senhaOK()" method="post">
+
+                <label for="nome">Nome</label>
+                <input type="text" class="conteudo__formulario--caixa conteudo__formulario--nome" name="nome"
+                    placeholder="Digite seu nome completo" required>
+
+
+                <label for="email">Email</label>
+                <input type="email" class="conteudo__formulario--caixa conteudo__formulario--email" name="email"
+                    placeholder="Escolha seu melhor email" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="conteudo__formulario--caixa conteudo__formulario--senha"
+                    name="senha" placeholder="Crie uma senha" required onchange="confirmaSenha()">
+
+                <label for="senha-confirme">Confirma sua senha</label>
+                <input type="password" id="confirma-senha"
+                    class="conteudo__formulario--caixa conteudo__formulario--senha" name="senha-confirme"
+                    placeholder="Repita a senha criada acima" required onchange="confirmaSenha()">
+
+                <input class="conteudo__formulario--cadastrar" type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </main>
+
+    <!-- <script src="../assets/js/confirma-senhas.js"></script> -->
+    <!-- <script src="../assets/js/valida-email.js"></script> -->
+
+    {% endblock %}

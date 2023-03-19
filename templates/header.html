@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+    <header>
+        <nav class="cabecalho">
+            <a href="/" class="cabecalho__item cabecalho__item--logo"> <img
+                    src="{{ url_for('static', filename='images/nav-logo.svg') }}" alt="Logo Page"> </a>
+            <a href="/home" class="cabecalho__item"> <img src="{{ url_for('static', filename='images/home.svg') }}"
+                    alt="Home Page"> </a>
+            <a href="/mensagem" class="cabecalho__item"> <img
+                    src="{{ url_for('static', filename='images/contato.svg') }}" alt="Contato Page"> </a>
+        </nav>
+    </header>
+
+    {% block conteudo %} {% endblock %}
+
+
+    <footer class="rodape">
+        <p>2022 - Desenvolvido por <a href="https://www.linkedin.com/in/hebert-santana/" target="_blank">Hebert
+                Santana</a></p>
+    </footer>
+
+    </body>
+
+</html>

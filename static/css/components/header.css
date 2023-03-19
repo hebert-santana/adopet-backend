@@ -1,0 +1,11 @@
+.cabecalho {
+    margin: 3rem 3rem 0 3rem;
+    display: flex;
+}
+
+.cabecalho__item {
+    margin: auto 4rem auto 0;
+}
+
+
+

@@ -1,0 +1,17 @@
+.rodape {
+    display: flex;
+    height: 6rem;
+    background-color: var(--verde);
+    color: var(--branco);
+    justify-content: center;
+    align-items: center;
+    min-width: none;
+}
+
+.rodape a {
+    color:antiquewhite
+}
+
+.rodape a:hover {
+    color: var(--azul);
+}

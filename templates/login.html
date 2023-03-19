@@ -1,0 +1,45 @@
+{% extends 'header.html' %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<title>Adopet | Login</title>
+</head>
+
+<body>
+
+    <!-- INICIO: Mensagem Logado -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <!-- FIM: Mensagem Logado -->
+
+    <!-- header.html -->
+    <!-- CONTEÚDO -->
+    <main>
+        <div class="conteudo">
+            <img id="conteudo__logo-adopet" src="{{ url_for('static', filename='images/logo-azul.svg') }}"
+                alt="Logo da Adopet">
+            <p class="conteudo__paragrafo">Já tem conta? Faça seu login:</p>
+            <form class="conteudo__formulario" method="POST" action="/logar">
+                <label for="email">Email</label>
+                <input type="email" class="conteudo__formulario--caixa conteudo__formulario--email" name="email"
+                    placeholder="Insira seu email" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" class="conteudo__formulario--caixa conteudo__formulario--senha" name="senha"
+                    placeholder="Insira sua senha" required>
+                <a class="conteudo__formulario--anchor">Esqueci minha senha</a>
+
+                <input class="conteudo__formulario--entrar" type="submit" value="Entrar">
+            </form>
+        </div>
+    </main>
+
+    {% endblock %}

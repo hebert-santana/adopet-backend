@@ -1,6 +1,6 @@
 <div align='center'>
 
-[<img src="./assets/img/logo-azul.svg" width=800px><br><sub>AdoPet</sub>](https://hebert-santana.github.io/adopet/)
+[<img src="./static/images/logo-azul.svg" width=800px><br><sub>AdoPet Back-End</sub>](https://hebert-santana.github.io/adopet-backend/)
 
 
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -10,20 +10,13 @@
 
 ## 🔎 Sobre o Projeto
 
-Este repositório consiste na criação de uma página para uma empresa chamada **AdoPet**. Essa empresa seria uma intermediadora entre pessoas que desejam adotar animais abandonados e ONGs que cuidam e fazem a doação dos animais.
+Este repositório consiste na criação de uma aplicação web utilizando a framework Flask para Python o projeto de front-end do [repositório AdoPet](https://github.com/hebert-santana/adopet).
 
-Este é um projeto que está sendo desenvolvido durante a 4ª edição do Desafio Front-End dos alunos da escola de tecnologia [Alura](https://www.alura.com.br).
+A aplicação implementa rotas para diferentes funcionalidades, como login, cadastro, home, mensagem e perfil. Além disso, a aplicação faz uso de um banco de dados SQL Server para armazenar informações dos usuários cadastrados.
 
-## :pencil: Sobre o desafio
+A aplicação conta com a função de login_required, que verifica se o usuário está logado antes de permitir o acesso às rotas protegidas. Caso o usuário não esteja logado e tente acessar uma rota protegida, será redirecionado para a página de login.
 
-O desafio Front-End fez uma simulação de ambiente de trabalho dos desenvolvedores, fornecendo tarefas semanais a serem executadas e implementadas no projeto, para que os alunos pudessem colocar em prática tudo que aprenderam durante os diversos cursos de formação Front-End da escola.
-
-## 📈 Etapas do projeto
-
--   **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_.
--   **Semana 2:** Validação dos formulários, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
--   **Semana 3 (em andamento):** Funcionalidade de login/logout com armazenamento local (`localStorage`) e definição de rotas protegidas.
--   **Semana 4 (a iniciar):** Funcionalidade de login/logout no back-end da aplicação.
+O projeto utiliza a biblioteca pyodbc para a conexão com o banco de dados, e faz uso do decorador @wraps para garantir que as informações da função original sejam preservadas após a aplicação do decorador.
 
 <hr>
 
